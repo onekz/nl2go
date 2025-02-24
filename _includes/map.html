@@ -1,9 +1,13 @@
-<div id="{{ page.map-id }}" style="height: 300px;"></div>
+<div class="map" id="{{ page.map-id }}"></div>
 
 <script>
-    var map = L.map('{{ page.map-id }}').setView([51.505, -0.09], 13);
+    // var map = L.map('{{ page.map-id }}').setView([51.505, -0.09], 13);
+    var {{ page.map-var }}= L.map('{{ page.map-id }}').setView([{{ page.lat }}, {{ page.long }}], {{ page.zoom }});
+    var marker = L.marker([{{ page.lat }}, {{ page.long }}]).addTo({{ page.map-var }});
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+    }).addTo({{ page.map-var }});
+    marker.bindPopup("<strong>{{ page.popup-title }}</strong><br>{{ page.popup-text }}");
 </script>
+<br>
