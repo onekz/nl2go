@@ -1,7 +1,6 @@
 <div class="map" id="{{ page.map-id }}"></div>
 
 <script>
-    // var map = L.map('{{ page.map-id }}').setView([51.505, -0.09], 13);
     var {{ page.map-var }}= L.map('{{ page.map-id }}').setView([{{ page.lat }}, {{ page.long }}], {{ page.zoom }});
     var marker = L.marker([{{ page.lat }}, {{ page.long }}]).addTo({{ page.map-var }});
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
