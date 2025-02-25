@@ -16,6 +16,7 @@ time_to_reach: 20
 
 ---
 # Базовая информация
+Оригинальное название: Keukenhof  
 Сайт: [{{page.website}}]({{page.website}})  
 Адреc: {{ page.address }}  
 Открыт: с 20 марта по 11 мая 2025  
