@@ -10,7 +10,7 @@ layout: default
   <div class="map" id="allspots"></div>
 
   <script>
-      var allspots= L.map('allspots').setView([52.306980480689866, 4.748909089341528], 10);
+      var allspots= L.map('allspots').setView([52.306980480689866, 4.748909089341528], 9);
   
   {%- for post in site.posts -%}
       {% if post.lat and post.long %}
